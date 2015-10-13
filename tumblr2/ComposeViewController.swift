@@ -10,6 +10,7 @@ import UIKit
 
 class ComposeViewController: UIViewController, UIViewControllerTransitioningDelegate, UIViewControllerAnimatedTransitioning {
     
+    @IBOutlet var wholeView: UIView!
     
     @IBOutlet weak var textButton: UIButton!
     @IBOutlet weak var photoButton: UIButton!
@@ -55,7 +56,7 @@ class ComposeViewController: UIViewController, UIViewControllerTransitioningDele
             containerView!.addSubview(toViewController.view)
             toViewController.view.alpha = 0
             UIView.animateWithDuration(0.4, animations: { () -> Void in
-                toViewController.view.alpha = 1
+                toViewController.view.alpha = 0.98
                 }) { (finished: Bool) -> Void in
                     transitionContext.completeTransition(true)
             }
@@ -89,12 +90,41 @@ class ComposeViewController: UIViewController, UIViewControllerTransitioningDele
                 
                 }, completion: nil)
         } else {
-            UIView.animateWithDuration(0.4, animations: { () -> Void in
+        
+            UIView.animateWithDuration(0.3, delay: 0.1, usingSpringWithDamping: 0.8, initialSpringVelocity: 0.8, options: [], animations: { () -> Void in
+                self.textButton.frame.origin.y = -120
+                
+                }, completion: nil)
+            UIView.animateWithDuration(0.3, delay: 0.3, usingSpringWithDamping: 0.8, initialSpringVelocity: 0.8, options: [], animations: { () -> Void in
+                self.photoButton.frame.origin.y = -120
+                
+                }, completion: nil)
+            UIView.animateWithDuration(0.3, delay: 0.2, usingSpringWithDamping: 0.8, initialSpringVelocity: 0.8, options: [], animations: { () -> Void in
+                self.quoteButton.frame.origin.y = -120
+                
+                }, completion: nil)
+            UIView.animateWithDuration(0.3, delay: 0.3, usingSpringWithDamping: 0.8, initialSpringVelocity: 0.8, options: [], animations: { () -> Void in
+                self.linkButton.frame.origin.y = -120
+                
+                }, completion: nil)
+            UIView.animateWithDuration(0.3, delay: 0.2, usingSpringWithDamping: 0.8, initialSpringVelocity: 0.8, options: [], animations: { () -> Void in
+                self.chatButton.frame.origin.y = -120
+                
+                }, completion: nil)
+            UIView.animateWithDuration(0.3, delay: 0.35, usingSpringWithDamping: 0.8, initialSpringVelocity: 0.8, options: [], animations: { () -> Void in
+                self.videoButton.frame.origin.y = -120
+                
+                }, completion: nil)
+            UIView.animateWithDuration(0.3, delay: 0.2, usingSpringWithDamping: 0.8, initialSpringVelocity: 0.8, options: [], animations: { () -> Void in
+                self.nevermindButton.frame.origin.y = 800
+                
+                }, completion: nil)
+            UIView.animateWithDuration(0.4, delay: 0.3, options: [], animations: { () -> Void in
                 fromViewController.view.alpha = 0
                 }) { (finished: Bool) -> Void in
                     transitionContext.completeTransition(true)
                     fromViewController.view.removeFromSuperview()
-            }
+                }
         }
     }
 
@@ -104,6 +134,8 @@ class ComposeViewController: UIViewController, UIViewControllerTransitioningDele
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        view.alpha = 0.8
         
         textButton.frame.origin.y = view.frame.height
         photoButton.frame.origin.y = view.frame.height

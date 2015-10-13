@@ -19,6 +19,7 @@ class TabBarViewController: UIViewController {
     var accountViewController: UIViewController!
     var trendingViewController: UIViewController!
     
+    @IBOutlet weak var explorePopup: UIImageView!
     var viewControllers: [UIViewController]!
     
     var selectedIndex: Int = 0
@@ -36,6 +37,7 @@ class TabBarViewController: UIViewController {
         
         buttons[selectedIndex].selected = true
         didPressTab(buttons[selectedIndex])
+        explorePopup.hidden = false
 
     }
 
@@ -56,6 +58,15 @@ class TabBarViewController: UIViewController {
         contentView.addSubview(vc.view)
         
         vc.didMoveToParentViewController(self)
+        
+        if buttons[selectedIndex] == buttons[1] {
+            explorePopup.hidden = true
+        } else {
+            explorePopup.hidden = false
+            UIView.animateWithDuration(0.6, delay: 0, options: [UIViewAnimationOptions.Autoreverse, UIViewAnimationOptions.Repeat], animations: { () -> Void in
+                self.explorePopup.transform = CGAffineTransformMakeTranslation(0, -10)
+                }, completion: nil)
+        }
         
     }
     

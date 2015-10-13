@@ -21,6 +21,7 @@
 		4D8F9E141BCC9A910013C35E /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8F9E131BCC9A910013C35E /* AccountViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		4D8F9E161BCC9AAA0013C35E /* TrendingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8F9E151BCC9AAA0013C35E /* TrendingViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		4D8F9E181BCCADAB0013C35E /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8F9E171BCCADAB0013C35E /* Common.swift */; settings = {ASSET_TAGS = (); }; };
+		4D8F9E1C1BCCDB6D0013C35E /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8F9E1B1BCCDB6D0013C35E /* LogInViewController.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,7 @@
 		4D8F9E131BCC9A910013C35E /* AccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
 		4D8F9E151BCC9AAA0013C35E /* TrendingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrendingViewController.swift; sourceTree = "<group>"; };
 		4D8F9E171BCCADAB0013C35E /* Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
+		4D8F9E1B1BCCDB6D0013C35E /* LogInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LogInViewController.swift; path = tumblr2/LogInViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +93,7 @@
 		4D8F9DD11BCC98BD0013C35E = {
 			isa = PBXGroup;
 			children = (
+				4D8F9E1B1BCCDB6D0013C35E /* LogInViewController.swift */,
 				4D8F9DDC1BCC98BD0013C35E /* tumblr2 */,
 				4D8F9DF11BCC98BD0013C35E /* tumblr2Tests */,
 				4D8F9DFC1BCC98BD0013C35E /* tumblr2UITests */,
@@ -287,6 +290,7 @@
 				4D8F9E0C1BCC996D0013C35E /* TabBarViewController.swift in Sources */,
 				4D8F9E121BCC9A510013C35E /* ComposeViewController.swift in Sources */,
 				4D8F9DDE1BCC98BD0013C35E /* AppDelegate.swift in Sources */,
+				4D8F9E1C1BCCDB6D0013C35E /* LogInViewController.swift in Sources */,
 				4D8F9E0E1BCC9A090013C35E /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
